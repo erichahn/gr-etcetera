@@ -20,10 +20,10 @@
 description: GQRX as a frontend for digital receivers
 inherit: empty
 category: application
-configure: 'qmake -recursive BOOST_SUFFIX= INCLUDEPATH="../../gr-dsd/dsd $prefix/include/osmo-tetra
+configure: 'qmake -project -recursive BOOST_SUFFIX= INCLUDEPATH="../../gr-dsd/dsd $prefix/include/osmo-tetra
   $prefix/include/dsd $prefix/include ../../osmo-tetra/src" DEPENDPATH="$prefix/lib
   $prefix/include/dsd" LIBS+="-Xlinker -zmuldefs" ||
-  qmake-qt4 -recursive BOOST_SUFFIX= INCLUDEPATH="../../gr-dsd/dsd $prefix/include/osmo-tetra
+  qmake-qt4 -project -recursive BOOST_SUFFIX= INCLUDEPATH="../../gr-dsd/dsd $prefix/include/osmo-tetra
   $prefix/include/dsd $prefix/include ../../osmo-tetra/src" DEPENDPATH="$prefix/lib
   $prefix/include/dsd" LIBS+="-Xlinker -zmuldefs"
   '
